@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Senoosa | Nusantara Ethnic Wear</title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Divisima | eCommerce Template">
+	<meta name="keywords" content="divisima, eCommerce, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+	
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 text-center text-lg-left">
+							<!-- logo -->
+							<a href="./index.html" class="site-logo">
+								<img src="img/senoosa.png" alt="">
+							</a>
+						</div>
+						<div class="col-xl-6 col-lg-5">
+							<form class="header-search-form">
+								<input type="text" placeholder="Search on senoosa ....">
+								<button><i class="flaticon-search"></i></button>
+							</form>
+						</div>
+						<div class="col-xl-4 col-lg-5">
+							<div class="user-panel">
+								<div class="up-item">
+									<i class="flaticon-profile"></i>
+									<a href="#">Sign</a> In or <a href="#">Create Account</a>
+								</div>
+								<div class="up-item">
+									<div class="shopping-card">
+										<i class="flaticon-bag"></i>
+										<span>0</span>
+									</div>
+									<a href="./cart.html">Shopping Cart</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="main-navbar">
+				<div class="container">
+					<!-- menu -->
+					<ul class="main-menu">
+						<li><a href="#./index.html">Home</a></li>
+						<li><a href="./category.html">Products</a>
+							<ul class="sub-menu">
+								<li><a href="./category-jacket.html">Jacket</a></li>
+								<li><a href="./category-pants.html">Pants</a></li>
+								<li><a href="./category-outer.html">Outer</a></li>
+							</ul>
+						</li>
+						<li><a href="./customize.html">Customize</a>	</li>
+						<li><a href="#">Recycle</a>
+							<ul class="sub-menu">
+								<li><a href="./product.html">Product Page</a></li>
+								<li><a href="./category.html">Category Page</a></li>
+								<li><a href="./cart.html">Cart Page</a></li>
+								<li><a href="./checkout.html">Checkout Page</a></li>
+								<li><a href="./contact.html">Contact Page</a></li>
+							</ul>
+						</li>
+						<li><a href="./blog.html">Blog<span class="new">New</span></a></li>
+						<li><a href="./contact.html">About Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- Header section end -->
+
+	<!-- Page info -->
+	<!-- <div class="page-top-info">
+		<div class="container">
+			<h4>Contact</h4>
+			<div class="site-pagination">
+				<a href="">Home</a> /
+				<a href="">Contact</a>
+			</div>
+		</div>
+	</div> -->
+	<!-- Page info end -->	
+
+	<script>
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+					$('.image-upload-wrap').hide();
+
+					$('.file-upload-image').attr('src', e.target.result);
+					$('.file-upload-content').show();
+
+					$('.image-title').html(input.files[0].name);
+				};
+
+				reader.readAsDataURL(input.files[0]);
+
+			} else {
+				removeUpload();
+			}
+		}
+
+		function removeUpload() {
+			$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+			$('.file-upload-content').hide();
+			$('.image-upload-wrap').show();
+		}
+		$('.image-upload-wrap').bind('dragover', function () {
+						$('.image-upload-wrap').addClass('image-dropping');
+				});
+				$('.image-upload-wrap').bind('dragleave', function () {
+						$('.image-upload-wrap').removeClass('image-dropping');
+		});
+	</script>
+
+	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<div class="file-upload" class="uploader">
+		<h2>Recycle Your Old Clothings</h2><br>
+		<p><ol>
+			<li>Send us the picture of your old clothes</li>
+			<li>Our designers will immediately think of ways to make it better with our ethnic fabrics</li>
+			<li>We'll let you know the future design and cost</li>
+			<li>Proceed to payment and send us the cloth</li>
+		</ol></p><br>
+		<button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+		<div class="image-upload-wrap">
+			<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+			<div class="drag-text">
+				<h3>Drag and drop a file or select add Image</h3>
+			</div>
+		</div>
+		<div class="file-upload-content">
+			<img class="file-upload-image" src="#" alt="your image" />
+			<div class="image-title-wrap">
+				<button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<!-- Footer section -->
+	<section class="footer-section">
+			<div class="container">
+				<div class="footer-logo text-center">
+					<a href="index.html"><img src="./img/senoosa.png" alt=""></a>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="footer-widget about-widget">
+							<h2>About</h2>
+							<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+							<img src="img/cards.png" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="footer-widget about-widget">
+							<h2>Questions</h2>
+							<ul>
+								<li><a href="">About Us</a></li>
+								<li><a href="">Track Orders</a></li>
+								<li><a href="">Returns</a></li>
+								<li><a href="">Jobs</a></li>
+								<li><a href="">Shipping</a></li>
+								<li><a href="">Blog</a></li>
+							</ul>
+							<ul>
+								<li><a href="">Partners</a></li>
+								<li><a href="">Bloggers</a></li>
+								<li><a href="">Support</a></li>
+								<li><a href="">Terms of Use</a></li>
+								<li><a href="">Press</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="footer-widget about-widget">
+							<h2>Questions</h2>
+							<div class="fw-latest-post-widget">
+								<div class="lp-item">
+									<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+									<div class="lp-content">
+										<h6>what shoes to wear</h6>
+										<span>Oct 21, 2018</span>
+										<a href="#" class="readmore">Read More</a>
+									</div>
+								</div>
+								<div class="lp-item">
+									<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+									<div class="lp-content">
+										<h6>trends this year</h6>
+										<span>Oct 21, 2018</span>
+										<a href="#" class="readmore">Read More</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="footer-widget contact-widget">
+							<h2>Questions</h2>
+							<div class="con-info">
+								<span>C.</span>
+								<p>Your Company Ltd </p>
+							</div>
+							<div class="con-info">
+								<span>B.</span>
+								<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
+							</div>
+							<div class="con-info">
+								<span>T.</span>
+								<p>+53 345 7953 32453</p>
+							</div>
+							<div class="con-info">
+								<span>E.</span>
+								<p>office@youremail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="social-links-warp">
+				<div class="container">
+					<div class="social-links">
+						<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+						<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+						<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
+						<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+						<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+						<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+						<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+					</div>
+	
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
+	<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	
+				</div>
+			</div>
+		</section>
+		<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/jquery.zoom.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
